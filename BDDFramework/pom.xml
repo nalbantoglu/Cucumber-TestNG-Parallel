@@ -69,7 +69,7 @@
 					<!-- run specific runner files which are specified in here -->
 					<!-- we can add multiple runners here -->
 					<includes>
-						<include>**/TestRunner.java</include>
+						<include>**/CucumberTestRunner.java</include>
 					</includes>
 				</configuration>
 			</plugin>
