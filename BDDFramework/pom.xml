@@ -44,9 +44,37 @@
 			<version>7.10.2</version>
 			<scope>test</scope>
 		</dependency>
+		
+		
+		
 
 
 	</dependencies>
+	
+	<build>
+		
+		
+			<plugins>
+			<!-- by using this plug in, we can simply run test from the terminal -->
+			<!-- "mvn clean" to clean up the report (target) and "mvn test" to
+			start testing -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.5.0</version>
+				<configuration>
+					<!-- Continue building advanced report even if there are
+					test failures -->
+					<testFailureIgnore>true</testFailureIgnore>
+					<!-- run specific runner files which are specified in here -->
+					<!-- we can add multiple runners here -->
+					<includes>
+						<include>**/TestRunner.java</include>
+					</includes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 
 </project>

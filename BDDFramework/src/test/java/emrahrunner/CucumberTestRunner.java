@@ -7,16 +7,20 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 
-		tags = "", features = { "src/test/resources/Features" }, glue = { "emrahsteps" }, plugin = { "pretty",
+		features = { "src/test/resources/Features" },
+		glue = { "emrahsteps" }, 
+		plugin = { 
+				
+				"pretty",
 
 				"html:target/htmlreport.html" }
 
-)
+) 
 
 public class CucumberTestRunner extends AbstractTestNGCucumberTests {
 
 	@Override
-	@DataProvider(parallel = true)
+	@DataProvider(parallel = false)
 	public Object[][] scenarios() {
 		return super.scenarios();
 	}

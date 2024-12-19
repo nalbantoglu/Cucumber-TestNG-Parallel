@@ -1,5 +1,5 @@
 #Author: Emrah
-@tag
+
 Feature: Testing cucumber-testng framework
 
 
